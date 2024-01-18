@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com EJS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #000000, #1a0fdf); 
+            color: #fff;
+        }
+
+        .header {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .header a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background-color: #555;
+        }
+
+        .buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .button {
+            margin: 10px;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: calc(33.33% - 20px); /* Para garantir 3 botões por linha */
+        }
+
+        .button img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .buttons-container {
+                height: auto;
+                padding-top: 20px;
+            }
+
+            .button {
+                width: calc(50% - 20px); /* 2 botões por linha em dispositivos móveis */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="/img/logo.jpg" alt="Logo">
+        </div>
+        <a href="http://localhost:3000/chat">Ir para o Chat</a>
+    </div>
+
+    <div class="buttons-container">
+        <a class="button" href="tel:192">
+            <img src="/img/samu.jpeg" alt="Ambulância">
+            Ambulância
+        </a>
+        <a class="button" href="tel:193">
+            <img src="/img/bombeiro.jpeg" alt="Bombeiro">
+            Bombeiro
+        </a>
+        <a class="button" href="tel:190">
+            <img src="/img/policia.jpeg" alt="Polícia">
+            Polícia
+        </a>
+        <a class="button" href="tel:100">
+            <img src="/img/policial.jpeg" alt="Denúncia">
+            Denúncia de Maus-tratos
+        </a>
+    </div>
+</body>
+</html>
